@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cash Solutions vous propose des solutions efficaces pour gérer vos encaissements. Expertise, maintenance et support pour simplifier votre gestion quotidienne à Villars-Sainte-Croix.">
+    <meta name="keywords" content="Cash Solutions, encaissement, caisse, TPV, terminal point de vente, maintenance, support, Villars-Sainte-Croix">
+    <meta name="author" content="Cash Solutions Sàrl">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Cash Solutions | Solutions d'encaissement">
+    <meta property="og:description" content="Cash Solutions vous propose des solutions efficaces pour gérer vos encaissements. Notre expertise et notre service client fiable facilite votre travail au quotidien.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.jpg">
+    <title>Cash Solutions | Solutions d'encaissement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+</head>
+<body>
+    <div class="af-top">
+        <div class="af-bar af-white af-card" id="myNavbar">
+            <a href="#home" class="af-bar-item af-button logo-link" style="padding:0 12px; margin-right:20px;">
+                <img src="images/logo.jpg" alt="Cash Solutions" class="navbar-logo" loading="lazy">
+            </a>
+            <div class="right-controls">
+                <div class="lang-switcher" id="langSwitcher">
+                    <button type="button" class="lang-button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" onclick="toggleLangMenu(event)" aria-label="Changer la langue">
+                        <span class="lang-flag" aria-hidden="true">
+                            <!-- France: three vertical bands -->
+                            <svg width="24" height="16" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                <rect width="1" height="2" fill="#0055A4" />
+                                <rect x="1" width="1" height="2" fill="#FFFFFF" />
+                                <rect x="2" width="1" height="2" fill="#EF4135" />
+                            </svg>
+                        </span>
+                        <span class="lang-label">FR</span>
+                        <i class="fa fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="lang-menu" id="lang-menu" aria-hidden="true">
+                            <button type="button" class="lang-option" data-lang="fr" onclick="setLang('fr')">
+                                <span class="lang-flag" aria-hidden="true">
+                                    <svg width="28" height="18" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <rect width="1" height="2" fill="#0055A4" />
+                                        <rect x="1" width="1" height="2" fill="#FFFFFF" />
+                                        <rect x="2" width="1" height="2" fill="#EF4135" />
+                                    </svg>
+                                </span>
+                                Français
+                            </button>
+                            <button type="button" class="lang-option" data-lang="de" onclick="setLang('de')">
+                                <span class="lang-flag" aria-hidden="true">
+                                    <svg width="28" height="18" viewBox="0 0 5 3" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <rect width="5" height="1" y="0" fill="#000000" />
+                                        <rect width="5" height="1" y="1" fill="#DD0000" />
+                                        <rect width="5" height="1" y="2" fill="#FFCE00" />
+                                    </svg>
+                                </span>
+                                Deutsch
+                            </button>
+                            <button type="button" class="lang-option" data-lang="en" onclick="setLang('en')">
+                                <span class="lang-flag" aria-hidden="true">
+                                    <!-- United Kingdom simplified flag -->
+                                    <svg width="28" height="18" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                                        <rect width="60" height="30" fill="#012169" />
+                                        <path d="M0 0 L60 30 M60 0 L0 30" stroke="#fff" stroke-width="6" />
+                                        <path d="M0 0 L60 30 M60 0 L0 30" stroke="#C8102E" stroke-width="4" />
+                                        <path d="M30 0 L30 30 M0 15 L60 15" stroke="#fff" stroke-width="10" />
+                                        <path d="M30 0 L30 30 M0 15 L60 15" stroke="#C8102E" stroke-width="6" />
+                                    </svg>
+                                </span>
+                                English
+                            </button>
+                        </div>
+                </div>
+                    <button type="button" class="af-bar-item af-button menu-toggle" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobileMenu(event)" aria-label="Ouvrir le menu">
+                        <span class="hamburger" aria-hidden="true">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </span>
+                    </button>
+            </div>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <a href="#home" onclick="closeMobileMenu()" class="af-bar-item af-button">Accueil</a>
+            <div class="af-dropdown-mobile">
+                <button type="button" class="af-bar-item af-button af-dropdown-mobile-toggle" aria-expanded="false" aria-controls="secteur-mobile-menu" onclick="toggleSecteurMobileMenu(event)">
+                    Informations <span style="flex:1"></span><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="af-dropdown-content-mobile" id="secteur-mobile-menu">
+                    <a href="#horaires" onclick="closeMobileMenu()">Lien 1</a>
+                    <a href="#cours-collectifs" onclick="closeMobileMenu()">Lien 2</a>
+                    <a href="#team-olympia" onclick="closeMobileMenu()">Lien 3</a>
+                    <a href="#tarifs" onclick="closeMobileMenu()">Lien 4</a>
+                </div>
+            </div>
+            <a href="#certifications" onclick="closeMobileMenu()" class="af-bar-item af-button">Newsletter</a>
+            <a href="#contact" onclick="closeMobileMenu()" class="af-bar-item af-button">Contact</a>
+        </nav>
+    </div>
+
+    <header class="site-header" id="home">
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title"><span class="highlight-mission">Nous</span> faisons la différence.</h1>
+                <p>Cash Solutions vous propose des équipements pour la gestion de vos encaissements avec ou sans espèces. Adaptés pour votre événement cashfree ou votre point de vente au quotidien!</p>
+                <div class="hero-actions">
+                    <a class="btn" href="#button">En savoir d'avantages</a>
+                    <a class="btn btn--ghost" href="#contact">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-social af-display-bottomright af-text-grey af-large" style="padding: 30px 48px;">
+            <a href="https://www.facebook.com/p/Olympia-Fitness-100089854672476/?locale=fr_FR" target="_blank" rel="noopener" class="af-hover-opacity" aria-label="Facebook">
+                <i class="fa fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/cash-solutions-s%C3%A0rl/" target="_blank" rel="noopener" class="af-hover-opacity" aria-label="LinkedIn">
+                <i class="fa fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <!-- Clients logos: place your 6 client logos in images/logo1.jpg ... logo6.jpg -->
+        <!-- Clients logos: place your 6 client logos in images/logo1.jpg ... logo6.jpg -->
+        <section id="clients" class="clients-section af-container">
+            <div class="section-content">
+                <h2 class="section-title af-center">Nos clients</h2>
+                <div class="clients-grid" aria-label="Logos de nos clients">
+                    <div class="client-logo"><img data-base="images/logo1" alt="Logo client 1" loading="lazy"></div>
+                    <div class="client-logo"><img data-base="images/logo2" alt="Logo client 2" loading="lazy"></div>
+                    <div class="client-logo"><img data-base="images/logo3" alt="Logo client 3" loading="lazy"></div>
+                    <div class="client-logo"><img data-base="images/logo4" alt="Logo client 4" loading="lazy"></div>
+                    <div class="client-logo"><img data-base="images/logo5" alt="Logo client 5" loading="lazy"></div>
+                    <div class="client-logo"><img data-base="images/logo6" alt="Logo client 6" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Section: Solutions de point de vente -->
+        <section id="pos" class="section af-container">
+            <div class="section-content">
+                <h2 class="section-title af-center">Systèmes de point de vente</h2>
+                <p class="section-lead">Notre système de point de vente s'appuie sur des partenaires de confiance pour le traitement des paiements. Nous collaborons avec Worldline et Wallee afin de vous proposer des solutions de paiement sans espèces idéales pour votre événement. Notre système de point de vente est disponible en trois versions, utilisables individuellement ou combinées.</p>
+
+                <div class="pos-grid">
+                    <article class="pos-card" id="pos-fixed">
+                            <h3>CAISSE ENREGISTREUSE FIXE</h3>
+                            <img src="images/solution1.webp" alt="Caisse enregistreuse fixe avec terminal" loading="lazy">
+                        
+                        <p>Pour un point de vente fixe lors de votre événement, nous recommandons le système Worldline POS, composé d'une caisse enregistreuse et d'un terminal de paiement. La caisse enregistreuse est reliée au terminal de paiement. L'ensemble est connecté au réseau local (LAN).</p>
+                    </article>
+
+                    <article class="pos-card" id="pos-mobile">
+                            <h3>CAISSE ENREGISTREUSE MOBILE</h3>
+                            <img src="images/solution2.webp" alt="Caisse enregistreuse mobile" loading="lazy">
+                        
+                        <p>Le terminal de paiement Worldline peut également être connecté à des systèmes de point de vente mobiles, fonctionnant comme un smartphone. Cette solution est particulièrement adaptée aux bars. Le système de point de vente mobile se connecte à un réseau Wi‑Fi, tandis que le terminal de paiement est connecté à un réseau local.</p>
+                    </article>
+
+                    <article class="pos-card" id="pos-all-in-one">
+                            <h3>SOLUTION TOUT-EN-UN</h3>
+                            <img src="images/solution3.webp" alt="Solution tout-en-un" loading="lazy">
+                        
+                        <p>Une caisse enregistreuse et un terminal de paiement tout-en-un ? C’est précisément ce que nous proposons avec notre partenaire Wallee. Les clients règlent leurs achats directement sur cet appareil au design épuré, semblable à un smartphone. Notre système de point de vente tout-en-un est compatible Wi‑Fi et 4G et opérationnel en un clin d’œil.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        
+
+        <!-- Section: Evenements -->
+        <section id="events" class="events-section af-container">
+            <div class="section-content">
+                <div class="events-row">
+                    <div class="events-media">
+                        <img data-base="images/logicielimage" alt="Événements Payfix" loading="lazy">
+                    </div>
+                    <div class="events-copy">
+                        <h2 class="section-title">Logiciel de point de vente de Payfix</h2>
+                        <p class="events-lead">Nous utilisons notre propre logiciel de caisse, Payfix, sur tous nos systèmes de point de vente. Nous développons et déployons ce logiciel lors d'événements, dans des stades et des restaurants depuis 2019. Le logiciel est constamment optimisé et maintenu. Il se distingue notamment par son interface conviviale et ses fonctionnalités complètes de reporting.</p>
+
+                        <div class="events-logos" aria-label="Partenaires Payfix">
+                            <div class="event-logo"><img data-base="images/logiciel1" alt="Partenaire 1" loading="lazy"></div>
+                            <div class="event-logo"><img data-base="images/logiciel2" alt="Partenaire 2" loading="lazy"></div>
+                            <div class="event-logo"><img data-base="images/logiciel3" alt="Partenaire 3" loading="lazy"></div>
+                            <div class="event-logo"><img data-base="images/logiciel4" alt="Partenaire 4" loading="lazy"></div>
+                            <div class="event-logo"><img data-base="images/logiciel5" alt="Partenaire 5" loading="lazy"></div>
+                            <div class="event-logo"><img data-base="images/logiciel6" alt="Partenaire 6" loading="lazy"></div>
+                            <div class="event-logo"><img data-base="images/logiciel7" alt="Partenaire 7" loading="lazy"></div>
+                            <div class="event-logo"><img data-base="images/logiciel8" alt="Partenaire 8" loading="lazy"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Distribution fine de l'électricité (image à droite sur desktop, inversée sur mobile) -->
+        <section id="electricite" class="events-section af-container">
+            <div class="section-content">
+                <div class="events-row reverse">
+                    <div class="events-copy">
+                        <h2 class="section-title">Gestion de l'électricité</h2>
+                        <p class="events-lead">Rien ne fonctionne sans électricité. Nous assurons l'alimentation électrique de toutes les caisses enregistreuses et terminaux de paiement, qu'ils soient fixes ou mobiles. Nous sommes responsables de l'alimentation électrique de tous les systèmes de point de vente lors de votre événement.</p>
+                        <!-- no logos for this section -->
+                    </div>
+                    <div class="events-media">
+                        <img data-base="images/electrecite" alt="Distribution électrique" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Réseau (copie de la section Logiciel, sans logos) -->
+        <section id="reseau" class="events-section af-container">
+            <div class="section-content">
+                <div class="events-row">
+                    <div class="events-media">
+                        <img data-base="images/reseau" alt="Réseau" loading="lazy">
+                    </div>
+                    <div class="events-copy">
+                        <h2 class="section-title">Réseau internet indépendant</h2>
+                        <p class="events-lead">Un réseau performant est essentiel à la réussite d'un événement. Notre solution garantit une connexion constante et stable. De la simple connexion internet lors d'une fête de village au réseau complexe des grands événements, nous vous offrons la connexion optimale.</p>
+                        <!-- No logos for this section as requested -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Insert partners section under Réseau -->
+        <section id="partenaires" class="partners-section af-container">
+            <div class="section-content">
+                <h2 class="section-title">Notre partenaire</h2>
+                <div class="partner-row">
+                    <p class="body p">Dinaco est à votre service en Suisse allemande. Ensemble, nous trouverons la solution de paiement qui vous convient :</p>
+                    <img src="images/partenaire.png" alt="Partenaire Dinaco" class="partner-logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section af-container af-light-grey">
+            <h2 class="section-title af-center">Contact</h2>
+            <div class="map-row" aria-label="Carte et coordonn&eacute;es - Cash Solutions Sàrl">
+                <div class="map-container" aria-hidden="false">
+                    <iframe
+                        title="Localisation - Cash Solutions Sàrl"
+                        src="https://www.google.com/maps?q=Cash+Solutions+Sàrl,+Rte+de+Bellevue+11,+1029+Villars-Sainte-Croix,+Switzerland&output=embed&t=k"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="map-info" aria-label="Coordonn&eacute;es de l&apos;emplacement">
+                    <img src="images/logo.jpg" alt="Cash Solutions" class="map-info__logo" loading="lazy">
+                    <p class="map-info__item">
+                        <i class="fa fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Route+de+Bellevue+11,+1029+Villars-Sainte-Croix,+Switzerland" target="_blank" rel="noopener" class="map-info__address-link">Cash Solutions Sàrl<br>Route de Bellevue 11<br>1029 Villars-Sainte-Croix<br>Switzerland</a>
+                    </p>
+                    <p class="map-info__item">
+                        <i class="fa fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:info@cash-solutions.ch">info@cash-solutions.ch</a>
+                    </p>
+                    <p class="map-info__item">
+                        <i class="fa fa-solid fa-phone" aria-hidden="true"></i>
+                        <a href="tel:0848102900">0848&nbsp;102&nbsp;900</a>
+                    </p>
+                    <div class="map-cta">
+                        <a class="map-info__directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=Route+de+Bellevue+11,+1029+Villars-Sainte-Croix,+Switzerland" target="_blank" rel="noopener" aria-label="Itinéraire vers Cash Solutions">Itinéraire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer footer--layout af-white af-padding-64">
+        <div class="footer-inner">
+            <div class="footer-col footer-col--left">
+                <!-- Back-to-top button removed as requested -->
+            </div>
+
+            <div class="footer-col footer-col--center">
+                <p class="footer-center-text">Site créé par Site-simple.ch à des fins de démonstration. Tout contenu peut-être changé et adapté.</p>
+            </div>
+
+            <div class="footer-col footer-col--right">
+                <!-- intentionally left empty -->
+            </div>
+        </div>
+    </footer>
+</script>
+        <script src="main.js"></script>
+
+        <!-- Logo loader: probe common extensions and set first existing source -->
+        <script>
+        (function(){
+            const exts = ['webp','png','jpg','jpeg','svg','gif'];
+            function setLogoSrc(img){
+                const base = img.dataset.base;
+                if(!base) return;
+                let i = 0;
+                let found = false;
+                function tryNext(){
+                    if(found) return;
+                    if(i >= exts.length){
+                        // as last resort, try the jpg filename (may 404 but gives fallback)
+                        img.src = base + '.jpg';
+                        return;
+                    }
+                    const ext = exts[i++];
+                    const test = new Image();
+                    test.onload = function(){ if(!found){ found = true; img.src = base + '.' + ext; } };
+                    test.onerror = function(){ tryNext(); };
+                    test.src = base + '.' + ext + '?_=' + (Date.now());
+                }
+                tryNext();
+            }
+            document.addEventListener('DOMContentLoaded', function(){
+                    document.querySelectorAll('img[data-base]').forEach(setLogoSrc);
+            });
+        })();
+        </script>
+</body>
+</html>
