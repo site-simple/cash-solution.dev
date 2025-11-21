@@ -222,12 +222,15 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleButton.setAttribute('aria-expanded', 'true');
         // add class to the toggle button so CSS performs the animation
         try { toggleButton.classList.add('open'); } catch (e) {}
+        // mark page as menu-open so CSS can adjust header/navbar styles
+        try { document.body.classList.add('menu-open'); } catch (e) {}
     }
     function closeMenu() {
         mobileMenu.classList.remove('is-open');
         mobileMenu.setAttribute('aria-hidden', 'true');
         toggleButton.setAttribute('aria-expanded', 'false');
         try { toggleButton.classList.remove('open'); } catch (e) {}
+        try { document.body.classList.remove('menu-open'); } catch (e) {}
         // Re-enable language switcher when menu closed
         try { enableLangSwitcher(); } catch (e) {}
         // Return focus to the menu toggle for accessibility
