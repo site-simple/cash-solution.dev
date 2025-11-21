@@ -1956,22 +1956,24 @@ body #certifications .section-title {
 }
 
 /* Itinéraire button inside the contact/info box */
+/* Itinéraire button: dark/nuanced style matching site */
 .map-info__directions {
 	display: inline-block;
-	background: #ffffff;
-	color: #111111;
+	background: #181818; /* nuanced site black */
+	color: #ffffff;
 	padding: 0.6rem 1rem;
 	border-radius: 6px;
 	text-decoration: none;
 	font-weight: 700;
-	border: 1px solid rgba(0,0,0,0.08);
-	box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+	border: 1px solid rgba(255,255,255,0.06);
+	box-shadow: 0 3px 10px rgba(0,0,0,0.16);
 }
 .map-info__directions:hover,
 .map-info__directions:focus {
-	background: #f6f6f6;
-	color: #050505;
+	background: #000000; /* slightly stronger black on hover */
+	color: #ffffff;
 	text-decoration: none;
+	box-shadow: 0 6px 20px rgba(0,0,0,0.24);
 }
 
 @media (max-width: 640px) {
@@ -2242,7 +2244,7 @@ body .site-footer .footer-backtotop:focus-visible {
 	color: #ffffff !important;
 	font-style: italic;
 	text-align: center !important;
-	margin: 0;
+	margin: 5px;
 }
 
 @media (max-width: 780px) {
@@ -2355,6 +2357,13 @@ body .site-footer .footer-note {
 		margin-top: 10px !important;
 		margin-bottom: 10px !important;
 		/* Do not override height so existing height rules remain in effect */
+	}
+
+	/* Ensure all section headings (h2) are centered on small screens */
+	section h2,
+	body .section h2,
+	body .section-title {
+		text-align: center !important;
 	}
 }
 
@@ -2680,6 +2689,17 @@ main {
 .menu-toggle.open:focus-visible {
 	color: #000000 !important;
 	background-color: rgba(0,0,0,0.04) !important;
+}
+/* When the menu is open, remove the navbar shadow for a cleaner overlay */
+body.menu-open #myNavbar,
+body.menu-open .af-top #myNavbar {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+/* Add a subtle grey border at the bottom of the opened menu for separation */
+body.menu-open #mobileMenu,
+body.menu-open .mobile-menu.is-open {
+	border-bottom: 1px solid #e6e6e6 !important;
 }
 /* ------------------------------------------------------------------
    Header (Olympia) styles - restore .site-header/.hero styles
@@ -3433,4 +3453,3 @@ header::before,
 		margin-bottom: 0 !important;
 	}
 }
-
